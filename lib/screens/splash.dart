@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
         if (data['status'] == 'Server is running') {
           if (mounted) {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (_) => const LoginScreen(),
+              builder: (_) => LoginScreen(),
             ));
           }
         } else {

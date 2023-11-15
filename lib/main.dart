@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ldd_app/screens/splash.dart';
-
+import 'package:ldd_app/components/global_key.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,8 +9,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(),
+    return MaterialApp(
+      navigatorKey: navigatorKey,
+      scaffoldMessengerKey: scaffoldMessengerKey,
+      home: const SplashScreen(),
     );
   }
 }
