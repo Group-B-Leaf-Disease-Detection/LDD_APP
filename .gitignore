@@ -25,3 +25,16 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+
+
+.dart_tool/
+
+ios/
+macos/
+android/
+build/
+linux/
+web/
+windows/
+
