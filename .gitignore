@@ -30,11 +30,5 @@ doc/api/
 
 .dart_tool/
 
-ios/
-macos/
-android/
-build/
-linux/
-web/
-windows/
+
 
