@@ -3,7 +3,7 @@ import "package:flutter/services.dart";
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:ldd_app/screens/login.dart';
+import 'package:ldd_app/screens/auth.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen>
         if (data['status'] == 'Server is running') {
           if (mounted) {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (_) => LoginScreen(),
+              builder: (_) => const CheckAuth(),
             ));
           }
         } else {

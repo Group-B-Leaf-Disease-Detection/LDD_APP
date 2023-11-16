@@ -4,12 +4,14 @@ class InputTextField extends StatelessWidget {
   final dynamic controller;
   final String hintText;
   final bool obscureText;
+  final String errorMessage;
 
   const InputTextField({
     super.key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
+    required this.errorMessage,
 
     });
 
@@ -17,7 +19,7 @@ class InputTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: TextField(
+                child: TextFormField(
                   controller: controller,
                   obscureText: obscureText,
                   decoration: InputDecoration(
@@ -32,6 +34,12 @@ class InputTextField extends StatelessWidget {
                     hintText: hintText,
                     hintStyle: TextStyle(color:Colors.grey.shade500),
                   ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return errorMessage;
+                    }
+                    return null;
+                  },
                 ),
               );
   }
